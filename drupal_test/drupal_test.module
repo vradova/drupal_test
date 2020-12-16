@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Use hook_form_alter to alter Job content type node form.
+ */
+
+/**
+ * Code for hook alter Job content type node form.
+ */
+function drupal_test_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'job_node_form') {
+    $freelance = $form['#node']->field_employment_type['und'][0]['value'];
+    if ($freelance == "3") {
+      $form['field_employment_type']['#disabled'] = TRUE;
+    }
+  }
+}

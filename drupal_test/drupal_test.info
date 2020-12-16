@@ -1,0 +1,4 @@
+name = Drupal Test
+description = This module will disable Employment type field for editing in Job Node, if it is declared as Freelance Job type
+core = 7.x
+package = Custom modules
